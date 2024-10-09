@@ -1,0 +1,16 @@
+name: test1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'restricted-file.py'
+
+jobs:
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test2
+        run: |
+          echo "hello..."

@@ -1,0 +1,15 @@
+name: test2
+
+on:
+  workflow_run:
+    worksflows: ["test1"]
+    types:
+      - completed
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test1
+        run: |
+          echo "bye..."
